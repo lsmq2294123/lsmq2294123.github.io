@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos y Condiciones — Pro Picks MX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface: #141414;
+      --border: rgba(255,255,255,0.08);
+      --accent: #c9f53b;
+      --accent-dim: rgba(201,245,59,0.08);
+      --text-primary: #f0f0ec;
+      --text-secondary: #888880;
+      --text-muted: #555550;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .badge {
+      font-size: 11px;
+      font-family: var(--font-display);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text-secondary);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 5rem 2rem 8rem;
+    }
+
+    .page-header {
+      margin-bottom: 4rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-label {
+      font-size: 11px;
+      font-family: var(--font-display);
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .meta strong {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      gap: 4px;
+    }
+
+    .toc ol li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .toc ol li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-family: var(--font-display);
+      color: var(--text-muted);
+      min-width: 22px;
+      font-weight: 500;
+    }
+
+    .toc a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover { color: var(--accent); }
+
+    section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 .num {
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      background: var(--accent-dim);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    .highlight-box {
+      background: var(--accent-dim);
+      border: 1px solid rgba(201,245,59,0.15);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-box p {
+      color: rgba(201,245,59,0.8);
+      font-size: 14px;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+      display: grid;
+      gap: 6px;
+    }
+
+    ul li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      color: var(--text-secondary);
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    ul li::before {
+      content: '→';
+      color: var(--accent);
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 3rem 1.25rem 5rem; }
+      header { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">Pro Picks <span>MX</span></a>
+  <span class="badge">Legal</span>
+</header>
+
+<main>
+  <div class="page-header">
+    <span class="page-label">Documento Legal</span>
+    <h1>Términos y Condiciones</h1>
+    <p class="meta">
+      <strong>Última actualización:</strong> Abril 2026 &nbsp;·&nbsp;
+      <strong>Versión:</strong> 1.0
+    </p>
+  </div>
+
+  <div class="toc">
+    <p class="toc-title">Contenido</p>
+    <ol>
+      <li><a href="#s1">Aceptación de los términos</a></li>
+      <li><a href="#s2">Descripción del servicio</a></li>
+      <li><a href="#s3">Advertencia sobre apuestas</a></li>
+      <li><a href="#s4">Suscripciones y pagos</a></li>
+      <li><a href="#s5">Política de reembolsos</a></li>
+      <li><a href="#s6">Propiedad intelectual</a></li>
+      <li><a href="#s7">Conducta del usuario</a></li>
+      <li><a href="#s8">Limitación de responsabilidad</a></li>
+      <li><a href="#s9">Modificaciones al servicio</a></li>
+      <li><a href="#s10">Contacto</a></li>
+    </ol>
+  </div>
+
+  <section id="s1">
+    <h2><span class="num">01</span> Aceptación de los términos</h2>
+    <p>Al acceder, suscribirte o utilizar cualquier servicio ofrecido por Pro Picks MX, incluyendo nuestro servidor de Discord y plataforma de pago, aceptas estar legalmente vinculado por estos Términos y Condiciones.</p>
+    <p>Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestros servicios.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s2">
+    <h2><span class="num">02</span> Descripción del servicio</h2>
+    <p>Pro Picks MX es una comunidad de información y análisis deportivo. Nuestro servicio consiste en:</p>
+    <ul>
+      <li>Compartir picks y análisis deportivos elaborados por cappers reconocidos y nuestro equipo interno</li>
+      <li>Acceso a canales exclusivos en Discord según el plan de suscripción contratado</li>
+      <li>Contenido educativo sobre gestión de bankroll y estrategia de apuestas</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Importante: Pro Picks MX vende información y análisis. No somos una casa de apuestas, no aceptamos ni gestionamos dinero de apuestas, y no actuamos como intermediario entre el usuario y ninguna plataforma de juego.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s3">
+    <h2><span class="num">03</span> Advertencia sobre apuestas</h2>
+    <p>Las apuestas deportivas implican un riesgo financiero real. Al utilizar nuestro servicio, reconoces y aceptas lo siguiente:</p>
+    <ul>
+      <li>Ningún pick o análisis garantiza ganancias. Los resultados pasados no son indicativos de resultados futuros.</li>
+      <li>Eres completamente responsable de tus decisiones de apuesta y de las cantidades que decidas arriesgar.</li>
+      <li>Nunca debes apostar dinero que no puedas permitirte perder.</li>
+      <li>El uso de nuestro servicio está destinado exclusivamente a mayores de 18 años.</li>
+      <li>Pro Picks MX no se hace responsable de pérdidas económicas derivadas del uso de nuestra información.</li>
+    </ul>
+    <p>Si crees que tienes un problema con el juego, te recomendamos buscar ayuda profesional.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s4">
+    <h2><span class="num">04</span> Suscripciones y pagos</h2>
+    <p>Nuestro servicio opera bajo un modelo de suscripción mensual gestionado a través de LaunchPass. Al suscribirte, aceptas:</p>
+    <ul>
+      <li>El cobro automático mensual en la fecha de renovación de tu plan</li>
+      <li>Proporcionar información de pago válida y mantenerla actualizada</li>
+      <li>Que el acceso al contenido premium está condicionado al pago activo de la suscripción</li>
+    </ul>
+    <p>Los precios vigentes son $180 MXN/mes (Plan Básico) y $350 MXN/mes (Plan VIP), sujetos a cambios con previo aviso.</p>
+    <p>La semana de prueba gratuita está disponible para nuevos usuarios y no requiere tarjeta de crédito hasta el momento de la conversión.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s5">
+    <h2><span class="num">05</span> Política de reembolsos</h2>
+    <p>Dada la naturaleza digital e inmediata del contenido que ofrecemos, nuestra política de reembolsos es la siguiente:</p>
+    <ul>
+      <li>No se ofrecen reembolsos una vez que el acceso al servidor ha sido activado y el contenido ha sido consumido.</li>
+      <li>Si experimentas un problema técnico que te impidió acceder al servicio, contáctanos dentro de los 3 días siguientes y lo revisaremos caso por caso.</li>
+      <li>Puedes cancelar tu suscripción en cualquier momento. El acceso continuará hasta el final del período de facturación en curso.</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s6">
+    <h2><span class="num">06</span> Propiedad intelectual</h2>
+    <p>Todo el contenido publicado en nuestros canales de Discord — incluyendo picks, análisis, gráficos y estrategias — es propiedad exclusiva de Pro Picks MX o de los cappers con los que colaboramos.</p>
+    <ul>
+      <li>Queda estrictamente prohibido compartir, redistribuir o revender el contenido premium fuera del servidor.</li>
+      <li>Capturar o reenviar picks a personas no suscritas constituye una violación de estos términos y puede resultar en la cancelación inmediata de tu suscripción sin reembolso.</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s7">
+    <h2><span class="num">07</span> Conducta del usuario</h2>
+    <p>Al formar parte de nuestra comunidad, te comprometes a:</p>
+    <ul>
+      <li>Tratar con respeto a todos los miembros y al equipo de Pro Picks MX</li>
+      <li>No realizar spam, publicidad no autorizada ni promover otros servicios dentro del servidor</li>
+      <li>No utilizar lenguaje ofensivo, discriminatorio o que incite al odio</li>
+      <li>No intentar evadir el sistema de suscripción o compartir credenciales de acceso</li>
+    </ul>
+    <p>El incumplimiento de estas normas puede resultar en la expulsión permanente del servidor sin reembolso.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s8">
+    <h2><span class="num">08</span> Limitación de responsabilidad</h2>
+    <p>Pro Picks MX, sus administradores y colaboradores no serán responsables bajo ninguna circunstancia por:</p>
+    <ul>
+      <li>Pérdidas económicas derivadas del uso o la interpretación de nuestra información</li>
+      <li>Interrupciones del servicio causadas por factores externos (caídas de Discord, fallos de pago, etc.)</li>
+      <li>Decisiones de apuesta tomadas por el usuario basándose en nuestro contenido</li>
+    </ul>
+    <p>El servicio se proporciona "tal cual", sin garantía de resultados de ningún tipo.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s9">
+    <h2><span class="num">09</span> Modificaciones al servicio</h2>
+    <p>Pro Picks MX se reserva el derecho de modificar, suspender o discontinuar cualquier parte del servicio en cualquier momento, incluyendo precios, planes y contenido disponible.</p>
+    <p>Cualquier cambio significativo será comunicado con al menos 7 días de anticipación a través del canal #anuncios del servidor.</p>
+    <p>El uso continuado del servicio tras la notificación de cambios constituye la aceptación de los nuevos términos.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="s10">
+    <h2><span class="num">10</span> Contacto</h2>
+    <p>Para cualquier duda, reclamo o consulta relacionada con estos Términos y Condiciones, puedes contactarnos a través de los siguientes medios:</p>
+    <ul>
+      <li>Discord: mensaje directo al administrador del servidor</li>
+      <li>Correo electrónico: <a href="mailto:contacto@propicksmx.com" style="color: var(--accent); text-decoration: none;">contacto@propicksmx.com</a></li>
+    </ul>
+    <p>Respondemos en un plazo máximo de 48 horas hábiles.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Pro Picks MX · Todos los derechos reservados · <a href="#">Volver al inicio</a></p>
+</footer>
+
+</body>
+</html>
